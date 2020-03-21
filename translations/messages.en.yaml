@@ -1,0 +1,42 @@
+produit:
+  titre: 'Product list'
+  add: 'Add a product'
+  nom: 'Name'
+  description: 'More Information'
+  quantite: 'Quantity (in stock)'
+  prix: 'Price'
+  categorie: 'Category'
+  action: 'Action'
+  quantite01: 'Quantity of products'
+  delete: 'Delete'
+  save: 'Save'
+  image: 'Picture'
+  etat: "Situation"
+  add02: 'Added'
+  a: 'at'
+  name: 'Product'
+  quantite01: 'Quantity'
+  delete02: 'Delete the product'
+
+  there_is: "There is/are nb product/products"
+
+file:
+  error: "The file can't be upload"
+
+Nom: "Name"
+Description : "Description"
+Qte: "Quantity"
+Prix: "Price"
+Categorie: "Category"
+Photo: "Picture"
+Sauvegarder: "Save"
+Qte01: 'Quantity'
+Produit: 'Product'
+Save: 'Add in your shopping bag'
+
+
+pan:
+  rien: "There is nothing in your shopping bag"
+  panier: 'Panier'
+  montant: 'Amount of your shopping bag'
+  there_is: "There is/are nb product(s) in your shopping bag"

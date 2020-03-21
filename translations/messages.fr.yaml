@@ -1,0 +1,42 @@
+produit:
+  titre: 'Liste des produits'
+  add: 'Ajouter un produit'
+  nom: 'Nom'
+  description: 'Description'
+  quantite: "Quantité (en stock)"
+  prix: 'Prix'
+  categorie: 'Catégorie'
+  action: 'Action'
+  quantite01: 'Quantité de produit en stock'
+  delete: 'Supprimer'
+  save: 'Sauvegarder'
+  image: "Image"
+  etat: "Etat"
+  add02: "Ajouté le"
+  a: 'à'
+  name: 'Produit'
+  quantite02: 'Quantité'
+  delete02: 'Supprimer le produit'
+
+  there_is: "Il y a nb produit/produits"
+
+file:
+  error: "Le fichier n'a pas pu etre upload"
+
+Nom: "Nom"
+Description : "Description"
+Qte: "Quantité"
+Prix: "Prix"
+Categorie: "Catégorie"
+Photo: "Photo"
+Sauvegarder: "Sauvegarder"
+Qte01: 'Quantité'
+Save: 'Ajouter au panier'
+Produit: 'Produit'
+
+
+pan:
+  rien: "Il n'y a aucune panier"
+  panier: 'Panier'
+  montant: 'Montant total du panier'
+  there_is: "Il y a nb produit(s) dans le panier"
