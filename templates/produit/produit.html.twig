@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{%block title %} {{produit.nom}} {% endblock %}
+
+{% block body %}
+
+    {% if produit.image is not null %}
+        <img src="{{ asset('uploads/' ~ produit.image) }}"> <!-- "asset" recupere des images dans le dossier public et "~" permet de mélanger string et variable -->
+    {% endif %}
+    <h1>{{produit.nom}}</h1>
+    <p> {{'produit.quantite01' |trans}} : {{produit.qte}} </p>
+    <p> {{'produit.prix' |trans}} : {{produit.prix}} €</p>
+    
+    <br/>
+    <br/>
+
+    <h2>Modifier</h2>
+    {{ form(form) }}
+
+    <button  style="background-color:red ; border-radius:5px; " onmouseover="this.style.background='brown';this.style.color='white';" onmouseout="this.style.background='red';this.style.color='white';">
+        <a href="{{ path('delete_produit', {'id': produit.id}) }}" style="color:white; text-decoration:none;"  >
+            {{'produit.delete02' |trans}} 
+        </a>
+    </button>
+
+    <br/>
+    <br/>
+
+    
+    <br/>
+    <br/>
+
+{% endblock %}

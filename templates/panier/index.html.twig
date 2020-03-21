@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <h1>{{'pan.panier'|trans}}</h1>
+
+    {% if paniers is not empty %}
+        <p>{{ 'pan.there_is' |trans({'nb' :paniers|length}) }}</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{'produit.nom'|trans}}</th>
+                    <th>{{'produit.quantite02'|trans}}</th>
+                    <th>{{'produit.prix'|trans}}</th>
+                    <th>{{'produit.action'|trans}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for panier in paniers %}
+                    <tr>
+                        <td>{{panier.produit.nom}}</td>
+                        <td>{{panier.qte01}}</td>
+                        <td>
+                            {{panier.produit.prix * panier.qte01}}€
+                        </td>
+                        <td>
+                            <!--
+                            {% if panier.etat == false %}
+							    <a href="{{path('panier_etat', {'id':panier.id})}}">Acheter</a>
+                                {% else %}
+                                <p> Produit acheté </p>
+						    {% endif %}
+						    <br>                            
+                                                    ******* Bouton pour acheter le produit ********* 
+                            -->
+                            <button  style="background-color:red ; border-radius:5px; " onmouseover="this.style.background='brown';this.style.color='white';" onmouseout="this.style.background='red';this.style.color='white';">
+                                <a href="{{ path('delete_panier', {'id': panier.id}) }}" style="color:white; text-decoration:none;"  >
+                                    {{'produit.delete' |trans}}
+                                </a>
+                            </button>
+                            
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% set total_paniers = 0 %}
+
+        {% for panier in paniers %}
+            {% if panier.etat == false %}
+                {% set total_paniers = total_paniers + (panier.produit.prix * panier.qte01) %}
+            {% endif %}
+        {% endfor %}
+
+        <p style="font-size:18px">{{'pan.montant'|trans}} : <strong>{{ total_paniers }}€</strong></p>
+
+    {% else %} 
+        <p>{{'pan.rien'|trans}}</p>
+    {% endif %} 
+
+    <br/>
+    <br/>
+{% endblock %}
